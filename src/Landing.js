@@ -5,7 +5,7 @@ export class Landing extends React.Component {
         return(
             <div className="landing">
                 <h2>Finding a place to eat, made easy.</h2>
-                <button className="startButton" onClick={this.props.onChange}>
+                <button className="startButton" onClick={() => this.props.onChange('RestaurantMap')}>
                     Get Started
                 </button>
             </div>

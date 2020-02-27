@@ -36,3 +36,14 @@
     transition: opacity .25s ease-out;
     cursor: pointer;
 }
+
+.mapContainer {
+    display: flex;
+    height: 50vh;
+    background-color: whitesmoke;
+    flex-direction: column;
+}
+
+.restCards {
+    width: 50%;
+}

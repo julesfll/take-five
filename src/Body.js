@@ -1,6 +1,6 @@
 import React from 'react';
 import { Landing } from './Landing.js';
-import { RestaurantMap } from './RestaurantMap.js';
+import { RestaurantMapWrapper } from './RestaurantMapWrapper';
 
 export class Body extends React.Component {
     constructor(props) {
@@ -11,8 +11,8 @@ export class Body extends React.Component {
     changePage = (name) => this.setState({page: name}); 
 
     render() {
-        const out = this.state.page === 'landing' ? <Landing onChange={this.changePage}/> : <RestaurantMap />;
-        //const out = <RestaurantMap />;
+        const out = this.state.page === 'landing' ? <Landing onChange={this.changePage}/> : <RestaurantMapWrapper />;
+        // const out = <RestaurantMapWrapper />;
         return out;
     }
 }

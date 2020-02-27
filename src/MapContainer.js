@@ -21,27 +21,34 @@ export class MapContainer extends React.Component {
     render() {
 
         const style = {
-            width: '400px',
-            height: '400px'
+            width: '100%',
+            height: '100%',
         }
+
+        const containerStyle = {
+            width: '50vw',
+            height: '50vh',
+        }
+
         return (
-            <Map
-                google={this.props.google} //need to remove restaurants and extraneous info from showing
-                initialCenter={this.props.userLocation}
-                style={style}
-            >
-                <Marker
-                    onMouseover={this.handleMouseoverMarker}
-                    name={'Demo marker'}
-                    position={this.userLocation}/>
-                
-                <InfoWindow
-                    marker={this.state.activeMarker}
-                    visible={this.state.showingInfoWindow}
-                    >
-                    <InfoCard />
-                </InfoWindow>
-            </Map>
+                <Map
+                    google={this.props.google} //need to remove restaurants and extraneous info from showing
+                    initialCenter={this.props.userLocation}
+                    style={style}
+                    containerStyle={containerStyle}
+                >
+                    <Marker
+                        onMouseover={this.handleMouseoverMarker}
+                        name={'Demo marker'}
+                        position={this.userLocation}/>
+                    
+                    <InfoWindow
+                        marker={this.state.activeMarker}
+                        visible={this.state.showingInfoWindow}
+                        >
+                        <InfoCard />
+                    </InfoWindow>
+                </Map>
         )
     }
 }
