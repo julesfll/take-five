@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/take-five/static/css/main.ef792b76.chunk.css",
-    "main.js": "/take-five/static/js/main.eb71fe61.chunk.js",
-    "main.js.map": "/take-five/static/js/main.eb71fe61.chunk.js.map",
+    "main.js": "/take-five/static/js/main.11c3334c.chunk.js",
+    "main.js.map": "/take-five/static/js/main.11c3334c.chunk.js.map",
     "runtime-main.js": "/take-five/static/js/runtime-main.b3427101.js",
     "runtime-main.js.map": "/take-five/static/js/runtime-main.b3427101.js.map",
     "static/css/2.47e06e2e.chunk.css": "/take-five/static/css/2.47e06e2e.chunk.css",
-    "static/js/2.6eaec05a.chunk.js": "/take-five/static/js/2.6eaec05a.chunk.js",
-    "static/js/2.6eaec05a.chunk.js.map": "/take-five/static/js/2.6eaec05a.chunk.js.map",
+    "static/js/2.54c9d37e.chunk.js": "/take-five/static/js/2.54c9d37e.chunk.js",
+    "static/js/2.54c9d37e.chunk.js.map": "/take-five/static/js/2.54c9d37e.chunk.js.map",
     "index.html": "/take-five/index.html",
-    "precache-manifest.74f74850b85bc319b7dfed3f46a9a340.js": "/take-five/precache-manifest.74f74850b85bc319b7dfed3f46a9a340.js",
+    "precache-manifest.7837d7d9315327635879a0b37b4fe434.js": "/take-five/precache-manifest.7837d7d9315327635879a0b37b4fe434.js",
     "service-worker.js": "/take-five/service-worker.js",
     "static/css/2.47e06e2e.chunk.css.map": "/take-five/static/css/2.47e06e2e.chunk.css.map",
     "static/css/main.ef792b76.chunk.css.map": "/take-five/static/css/main.ef792b76.chunk.css.map",
-    "static/js/2.6eaec05a.chunk.js.LICENSE.txt": "/take-five/static/js/2.6eaec05a.chunk.js.LICENSE.txt"
+    "static/js/2.54c9d37e.chunk.js.LICENSE.txt": "/take-five/static/js/2.54c9d37e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b3427101.js",
     "static/css/2.47e06e2e.chunk.css",
-    "static/js/2.6eaec05a.chunk.js",
+    "static/js/2.54c9d37e.chunk.js",
     "static/css/main.ef792b76.chunk.css",
-    "static/js/main.eb71fe61.chunk.js"
+    "static/js/main.11c3334c.chunk.js"
   ]
 }
