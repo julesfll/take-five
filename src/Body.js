@@ -11,8 +11,8 @@ export class Body extends React.Component {
     changePage = (name) => this.setState({page: name}); 
 
     render() {
-        // const out = this.state.page === 'landing' ? <Landing onChange={this.changePage}/> : <RestaurantMapWrapper />;
-        const out = <RestaurantMapWrapper />;
+        const out = this.state.page === 'landing' ? <Landing onChange={this.changePage}/> : <RestaurantMapWrapper />;
+        // const out = <RestaurantMapWrapper />;
         return out;
     }
 }
