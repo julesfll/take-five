@@ -26,7 +26,7 @@ export class MapContainer extends React.Component {
         }
 
         const containerStyle = {
-            width: '50vw',
+            width: '90vw',
             height: '50vh',
         }
 

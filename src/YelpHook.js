@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 export const useYelpHook = (initialLoc) => {
@@ -7,23 +7,29 @@ export const useYelpHook = (initialLoc) => {
         headers: { Authorization: `Bearer ${API_KEY}` },
         params: {
             term: 'food',
-            latitude: '38.036214',
-            longitude: '-78.509277',
+            latitude: '0',
+            longitude: '0',
             radius: '1000',
             sort_by: 'rating'
         }
     }
+
     const [data, setData] = useState({ businesses: [] });
     const [loc, setLoc] = useState(initialLoc);
+    const [isLoading, setIsLoading] = useState(true);
+
     useEffect(() => {
         config.params.latitude = loc.lat;
         config.params.longitude = loc.lng;
         const fetchData = async () => {
+            setIsLoading(true);
             const result = await axios(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/search`, config);
             setData(result.data);
+            setIsLoading(false);
         };
 
         fetchData();
     }, [loc])
-    return [{data}, setLoc];
+
+    return [{ data, isLoading }, setLoc];
 }

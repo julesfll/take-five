@@ -1,27 +1,31 @@
 import React from 'react';
 import MapContainer from './MapContainer';
-import { usePosition } from 'use-position';
+import { usePosition } from './usePosition.js';
 import { useYelpHook } from './YelpHook';
-import { RestaurantCards } from './RestaurantCards';
+import { RestaurantCardContainer } from './RestaurantCardContainer.js';
+
 
 export function RestaurantMapWrapper(props) {
-    const { latitude, longitude, timestamp, accuracy, error } = usePosition();
-    const [{ data }, setLoc] = useYelpHook({ lat: '38.036214', lng: '-78.509277' });
-    // pos = {lat: (latitude + ''), lng: (longitude + '')};
+    const { latitude, longitude, timestamp, accuracy, error, isLoadingMap } = usePosition();
+    const pos = { lat: '0', lng: '0' };
+    const [{ data, isLoading }, setLoc] = useYelpHook(pos);
+
+
+    // const [{ data }, setLoc] = useYelpHook({ lat: '38.036214', lng: '-78.509277' });
 
     return (
         <div>
             <div className="mapContainer">
-                <MapContainer userLocation={{ lat: latitude, lng: longitude }} data={data} />
+                {isLoadingMap ? (<div>MAMAPMAPMAPMAPMAP</div>) : (
+                    <MapContainer userLocation={{ lat: latitude, lng: longitude }} data={data} />
+                )}
             </div>
             <div className="mapContainer">
-                <RestaurantCards data={data}/>
-                <h1>(Demo API retrieval)</h1>
-                <ul>
-                    <li>
-                        {JSON.stringify(data.businesses[0])}
-                    </li>
-                </ul>
+                <button onClick={event => setLoc({ lat: latitude, lng: longitude })}>Get Info</button>
+                <RestaurantCardContainer data={data} />
+                {/* {isLoading ? (<div>Loading...</div>)
+                    : (<div width="100vw">{ JSON.stringify(data.businesses[0])}</div>)
+                } */}
             </div>
         </div>
     )

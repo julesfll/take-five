@@ -30,10 +30,10 @@
     height: 20%;
     width: 20%;
     border: none;
+    transition: opacity .25s ease-out;
 }
 .startButton:hover {
     opacity: 50%;
-    transition: opacity .25s ease-out;
     cursor: pointer;
 }
 
@@ -47,3 +47,21 @@
 .restCards {
     width: 50%;
 }
+
+.cardWrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 2px 16px;
+
+    /* flex-wrap: wrap; */
+}
+.card {
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
