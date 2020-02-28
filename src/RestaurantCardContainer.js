@@ -2,7 +2,7 @@ import React from 'react';
 import { RestaurantCard } from './RestaurantCard';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row'
+import Row from 'react-bootstrap/Row';
 
 export class RestaurantCardContainer extends React.Component {
     render() {
@@ -11,9 +11,11 @@ export class RestaurantCardContainer extends React.Component {
         return (<div >
             {this.props.data &&
                 <Container>
-                    {restaurants.map((item, index) => (
-                        <RestaurantCard key={index} restaurant={item} />
-                    ))}
+                    <Row>
+                        {restaurants.map((item, index) => (
+                            <RestaurantCard key={index} restaurant={item} />
+                        ))}
+                    </Row>
                 </Container>
             }
         </div>);

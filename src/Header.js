@@ -1,10 +1,11 @@
 import React from 'react';
 import logo from './logo.png';
+import Row from 'react-bootstrap/Row';
 
 export class Header extends React.Component {
     render() {
         return(
-            <div className="container header">
+            <Row className="d-flex align-items-center header">
                 <img
                     className="Logo"
                     src={logo}
@@ -13,7 +14,7 @@ export class Header extends React.Component {
                     width="80px"
                 />
                 <h1 className="Title">TakeFive</h1>
-            </div>
+            </Row>
         )
     }
 }

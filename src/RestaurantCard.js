@@ -1,11 +1,12 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
 
 export class RestaurantCard extends React.Component {
     render() {
         const rest = this.props.restaurant;
-        const card = <div>
+        const card = <Col md={4}>
             {rest && (               
                 <Card>
                     <Card.Img variant="top" src={rest.image_url} />
@@ -19,7 +20,7 @@ export class RestaurantCard extends React.Component {
                     </Card.Body>
                 </Card>
             )}
-        </div>;
+        </Col>;
 
         return card;
     }

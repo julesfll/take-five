@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-export const useYelpHook = (initialLoc) => {
+export const useYelpHook = (loc) => {
     const API_KEY = 's4fNt_-ND4nCviBOL3gPAGg7NDDJaes9eUvsvQ6f4DWmY6fMWqHPiVbznBdCpFyZFSGSteUujFIxvB8OAq0nzpC8xEMGQ2x0ZbHQ97pb6C3x7MtsTqW3nw28NAVTXnYx';
     const config = {
         headers: { Authorization: `Bearer ${API_KEY}` },
@@ -15,7 +15,6 @@ export const useYelpHook = (initialLoc) => {
     }
 
     const [data, setData] = useState({ businesses: [] });
-    const [loc, setLoc] = useState(initialLoc);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -31,5 +30,5 @@ export const useYelpHook = (initialLoc) => {
         fetchData();
     }, [loc])
 
-    return [{ data, isLoading }, setLoc];
+    return [{ data, isLoading }];
 }
