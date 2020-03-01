@@ -1,18 +1,35 @@
 import React from 'react';
 import { Landing } from './Landing.js';
 import { RestaurantMapWrapper } from './RestaurantMapWrapper';
+import { Selection } from './Selections/Selection';
 
 export class Body extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { page: 'landing'};
+        this.state = { page: 'Landing', selData: '' };
         this.changePage = this.changePage.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
-    changePage = (name) => this.setState({page: name}); 
-
+    changePage = (name) => this.setState({ page: name });
+    handleSubmit = (input) => {
+        console.log('called')
+        this.setState({
+            page: 'RestaurantMap',
+            selData: input
+        });
+    }
     render() {
-        const out = this.state.page === 'landing' ? <Landing onChange={this.changePage}/> : <RestaurantMapWrapper />;
-        // const out = <RestaurantMapWrapper />;
+        var out;
+        switch (this.state.page) {
+            case 'RestaurantMap':
+                out = <RestaurantMapWrapper selData={this.state.selData}/>;
+                break;
+            case 'Selection':
+                out = <Selection onSubmit={this.handleSubmit} />;
+                break;
+            default:
+                out = <Landing onChange={this.changePage} />;
+        }
         return out;
     }
 }

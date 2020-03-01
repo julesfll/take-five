@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-export const useYelpHook = (loc) => {
+export const useYelpHook = (loc, selData) => {
     const API_KEY = 's4fNt_-ND4nCviBOL3gPAGg7NDDJaes9eUvsvQ6f4DWmY6fMWqHPiVbznBdCpFyZFSGSteUujFIxvB8OAq0nzpC8xEMGQ2x0ZbHQ97pb6C3x7MtsTqW3nw28NAVTXnYx';
     const config = {
         headers: { Authorization: `Bearer ${API_KEY}` },
         params: {
-            term: 'food',
+            term: 'restaurant',
             latitude: '0',
             longitude: '0',
-            radius: '1000',
-            sort_by: 'rating'
+            radius: selData.radius,
+            sort_by: 'rating',
+            price: selData.price,
         }
     }
 
@@ -18,6 +19,7 @@ export const useYelpHook = (loc) => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
+        console.log(selData);
         config.params.latitude = loc.lat;
         config.params.longitude = loc.lng;
         const fetchData = async () => {

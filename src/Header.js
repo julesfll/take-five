@@ -1,11 +1,11 @@
 import React from 'react';
-import logo from './logo.png';
+import logo from './Images/logo.png';
 import Row from 'react-bootstrap/Row';
 
 export class Header extends React.Component {
     render() {
         return(
-            <Row className="d-flex align-items-center header">
+            <Row className="header">
                 <img
                     className="Logo"
                     src={logo}

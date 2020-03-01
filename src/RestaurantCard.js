@@ -9,10 +9,10 @@ export class RestaurantCard extends React.Component {
         const card = <Col md={4}>
             {rest && (               
                 <Card className="card">
-                    <Card.Img variant="top" src={rest.image_url} className="cardImage" fluid/>
+                    <Card.Img variant="top" src={rest.image_url} className="cardImage" fluid="true"/>
                     <Card.Body>
                         <Card.Title>{rest.name}</Card.Title>
-                        <Card.Subtitle style={{ 'text-transform': 'uppercase', color: 'grey' }}>{rest.categories[0].title}</Card.Subtitle>
+                        <Card.Subtitle style={{ 'textTransform': 'uppercase', color: 'grey' }}>{rest.categories[0].title}</Card.Subtitle>
                         <Card.Text>
                             {rest.price}, {rest.rating} stars
                         </Card.Text>

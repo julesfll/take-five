@@ -62,7 +62,6 @@ export class MapContainer extends React.Component {
                     <Marker
                         key={index}
                         onClick={this.onMarkerHover}
-                        onMouseout={this.onClose}
                         position={{ lat: item.coordinates.latitude, lng: item.coordinates.longitude }}
                         name={item.name} />
 
