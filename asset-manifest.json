@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/take-five/static/css/main.918e428c.chunk.css",
-    "main.js": "/take-five/static/js/main.0e8de3dd.chunk.js",
-    "main.js.map": "/take-five/static/js/main.0e8de3dd.chunk.js.map",
+    "main.css": "/take-five/static/css/main.bb39e5d4.chunk.css",
+    "main.js": "/take-five/static/js/main.38144393.chunk.js",
+    "main.js.map": "/take-five/static/js/main.38144393.chunk.js.map",
     "runtime-main.js": "/take-five/static/js/runtime-main.b3427101.js",
     "runtime-main.js.map": "/take-five/static/js/runtime-main.b3427101.js.map",
-    "static/css/2.47e06e2e.chunk.css": "/take-five/static/css/2.47e06e2e.chunk.css",
-    "static/js/2.6692b8e3.chunk.js": "/take-five/static/js/2.6692b8e3.chunk.js",
-    "static/js/2.6692b8e3.chunk.js.map": "/take-five/static/js/2.6692b8e3.chunk.js.map",
+    "static/css/2.0eeca6c6.chunk.css": "/take-five/static/css/2.0eeca6c6.chunk.css",
+    "static/js/2.aee29589.chunk.js": "/take-five/static/js/2.aee29589.chunk.js",
+    "static/js/2.aee29589.chunk.js.map": "/take-five/static/js/2.aee29589.chunk.js.map",
     "index.html": "/take-five/index.html",
-    "precache-manifest.0d371ac5f9cb134c8ded998fa69a2d01.js": "/take-five/precache-manifest.0d371ac5f9cb134c8ded998fa69a2d01.js",
+    "precache-manifest.10b56a81d034011d841ce4eb346f90c8.js": "/take-five/precache-manifest.10b56a81d034011d841ce4eb346f90c8.js",
     "service-worker.js": "/take-five/service-worker.js",
-    "static/css/2.47e06e2e.chunk.css.map": "/take-five/static/css/2.47e06e2e.chunk.css.map",
-    "static/css/main.918e428c.chunk.css.map": "/take-five/static/css/main.918e428c.chunk.css.map",
-    "static/js/2.6692b8e3.chunk.js.LICENSE.txt": "/take-five/static/js/2.6692b8e3.chunk.js.LICENSE.txt",
+    "static/css/2.0eeca6c6.chunk.css.map": "/take-five/static/css/2.0eeca6c6.chunk.css.map",
+    "static/css/main.bb39e5d4.chunk.css.map": "/take-five/static/css/main.bb39e5d4.chunk.css.map",
+    "static/js/2.aee29589.chunk.js.LICENSE.txt": "/take-five/static/js/2.aee29589.chunk.js.LICENSE.txt",
     "static/media/splash.png": "/take-five/static/media/splash.7f722f91.png"
   },
   "entrypoints": [
     "static/js/runtime-main.b3427101.js",
-    "static/css/2.47e06e2e.chunk.css",
-    "static/js/2.6692b8e3.chunk.js",
-    "static/css/main.918e428c.chunk.css",
-    "static/js/main.0e8de3dd.chunk.js"
+    "static/css/2.0eeca6c6.chunk.css",
+    "static/js/2.aee29589.chunk.js",
+    "static/css/main.bb39e5d4.chunk.css",
+    "static/js/main.38144393.chunk.js"
   ]
 }
