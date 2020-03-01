@@ -13,6 +13,7 @@
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
+    "react-flexbox-grid": "^2.1.2",
     "react-geolocated": "^3.0.1",
     "react-scripts": "3.4.0",
     "use-position": "git+https://github.com/trekhleb/use-position.git"

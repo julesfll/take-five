@@ -58,10 +58,31 @@
 .card {
     height: 100%;
     width: 100%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+    padding: 10%;
 }
 
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
+
+.cardImage {
+    /* height: 10rem; */
+}
+
+.landingWrap {
+    display: flex;
+    align-items: center;
+}
+
+.titleWrap {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    padding-right: 20%;
+    padding-left: 10%;
+}
+
+.landingImage {
+    width: 100%;
+
+}

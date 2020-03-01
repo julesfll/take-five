@@ -12,7 +12,7 @@ export function RestaurantMapWrapper(props) {
     return (
         <div>
             <div className="mapContainer">
-                {isLoadingMap ? (<div>MAMAPMAPMAPMAPMAP</div>) : (
+                {isLoadingMap ? (<div>Map loading...</div>) : (
                     <MapContainer userLocation={{ lat: latitude, lng: longitude }} data={data} />
                 )}
             </div>

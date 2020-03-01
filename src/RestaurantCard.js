@@ -8,8 +8,8 @@ export class RestaurantCard extends React.Component {
         const rest = this.props.restaurant;
         const card = <Col md={4}>
             {rest && (               
-                <Card>
-                    <Card.Img variant="top" src={rest.image_url} />
+                <Card className="card">
+                    <Card.Img variant="top" src={rest.image_url} className="cardImage" fluid/>
                     <Card.Body>
                         <Card.Title>{rest.name}</Card.Title>
                         <Card.Subtitle style={{ 'text-transform': 'uppercase', color: 'grey' }}>{rest.categories[0].title}</Card.Subtitle>
