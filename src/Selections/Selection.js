@@ -33,11 +33,6 @@ export class Selection extends React.Component {
     }
     render() {
         return (
-            // <form onSubmit={this.handleSubmit}>
-            //     <h1>Step {this.state.step}</h1>
-            //     <Step1 handleChange={this.handleChange}/>
-            //     <h1>{this.state.price}</h1>
-            // </form>
             <div className="selection">
                 <h1>How much?</h1>
                 <Step1 handleChange={this.handleChange} />

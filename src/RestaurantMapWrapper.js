@@ -17,7 +17,7 @@ export function RestaurantMapWrapper(props) {
                 )}
             </div>
             <div>
-                <RestaurantCardContainer data={data} />
+                <RestaurantCardContainer data={data} isLoading={isLoading}/>
             </div>
         </div>
     )

@@ -1,27 +1,28 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
 
 export class RestaurantCard extends React.Component {
     render() {
         const rest = this.props.restaurant;
-        const card = <Col md={4}>
-            {rest && (               
-                <Card className="card">
-                    <Card.Img variant="top" src={rest.image_url} className="cardImage" fluid="true"/>
-                    <Card.Body>
-                        <Card.Title>{rest.name}</Card.Title>
-                        <Card.Subtitle style={{ 'textTransform': 'uppercase', color: 'grey' }}>{rest.categories[0].title}</Card.Subtitle>
-                        <Card.Text>
-                            {rest.price}, {rest.rating} stars
+        if (rest) {
+            const card =
+                (
+                    <Card style={{ flex: 1, marginTop: '1em' }}>
+                        <Card.Img variant="top" src={rest.image_url} style={{'object-fit': 'cover', height: '10vw'}}/>
+                        <Card.Body>
+                            <Card.Title>{rest.name}</Card.Title>
+                            <Card.Subtitle style={{ 'textTransform': 'uppercase', color: 'grey' }}>{rest.categories[0].title}</Card.Subtitle>
+                            <Card.Text>
+                                {rest.price}, {rest.rating} stars
                         </Card.Text>
-                        <Button href={rest.url} variant="primary">Find on Yelp</Button>
-                    </Card.Body>
-                </Card>
-            )}
-        </Col>;
-
-        return card;
+                            <Button href={rest.url} target="_blank" variant="primary">Find on Yelp</Button>
+                        </Card.Body>
+                    </Card>
+                )
+            return card;
+        } else {
+            return null
+        }
     }
 }

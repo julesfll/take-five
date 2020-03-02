@@ -21,7 +21,7 @@ export class Step2 extends React.Component {
                     value={this.state.value}
                     onChange={this.onSliderChange}
                     defaultValue={1000}
-                    min={0}
+                    min={500}
                     max={2000}
                     step={100}
                 />

@@ -5,8 +5,8 @@
 import { useState, useEffect } from 'react';
 
 const defaultSettings = {
-    enableHighAccuracy: false,
-    timeout: Infinity,
+    enableHighAccuracy: true,
+    timeout: 1000,
     maximumAge: 0,
 };
 
@@ -39,6 +39,5 @@ export const usePosition = (settings = defaultSettings) => {
         setIsLoadingMap(false);
 
     }, [settings]);
-
     return { ...position, error, isLoadingMap };
 };

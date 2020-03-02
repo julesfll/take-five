@@ -24,6 +24,18 @@ export class MapContainer extends React.Component {
             showingInfoWindow: true
         });
 
+    recenterMap(loc) {
+        const map = this.map;
+
+        const google = this.props.google;
+        const maps = google.maps;
+
+        if (map) {
+            let center = new maps.LatLng(loc.lat, loc.lng);
+            map.panTo(center);
+        }
+    }
+
     onClose = (props) => {
         this.setState({
             showingInfoWindow: false,
@@ -40,8 +52,8 @@ export class MapContainer extends React.Component {
         }
 
         const containerStyle = {
-            width: '100vw',
             height: '50vh',
+            display: 'flex',
         }
 
         const restaurants = this.props.data.businesses.slice(0, 5);
@@ -76,8 +88,10 @@ export class MapContainer extends React.Component {
                 <Marker icon={{
                     url: 'data:image/svg+xml;base64,' + personIcon,
                     anchor: new google.maps.Point(32, 32),
-                    scaledSize: new google.maps.Size(48, 48)
-                }} />
+                    scaledSize: new google.maps.Size(48, 48),
+                }}
+                    position={this.props.userLocation}
+                />
             </Map>
         )
     }

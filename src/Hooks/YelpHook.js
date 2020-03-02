@@ -19,7 +19,6 @@ export const useYelpHook = (loc, selData) => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        console.log(selData);
         config.params.latitude = loc.lat;
         config.params.longitude = loc.lng;
         const fetchData = async () => {

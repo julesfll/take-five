@@ -6,13 +6,12 @@ import { Selection } from './Selections/Selection';
 export class Body extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { page: 'Landing', selData: '' };
+        this.state = { page: 'Landing', selData: {} };
         this.changePage = this.changePage.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     changePage = (name) => this.setState({ page: name });
     handleSubmit = (input) => {
-        console.log('called')
         this.setState({
             page: 'RestaurantMap',
             selData: input

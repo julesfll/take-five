@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export class App extends React.Component {
   render() {
-    return(
+    return (
       <div>
         <Header />
         <Body />
