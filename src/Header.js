@@ -9,6 +9,7 @@ export class Header extends React.Component {
             <Row className="header" style={{
                 margin: 0,
                 width: '100%',
+                height: '11vh'
             }}>
                 <img
                     className="Logo"
@@ -17,7 +18,12 @@ export class Header extends React.Component {
                     height="80px"
                     width="80px"
                 />
-                <h1 className="Title">TakeFive</h1>
+                <h1 className="Title">
+                    <a href='https://julesfll.github.io/take-five/'
+                        style={{ textDecoration: 'none', color: 'whiteSmoke', cursor: 'pointer' }}>
+                        TakeFive
+                        </a>
+                </h1>
                 <a
                     href="https://github.com/julesfll/take-five"
                     target="_blank"

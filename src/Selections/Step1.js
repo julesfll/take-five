@@ -1,26 +1,25 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Row from 'react-bootstrap/Row';
+import React, { useState } from 'react';
+import { ToggleButton, ToggleButtonGroup } from 'react-bootstrap';
 
-export class Step1 extends React.Component {
-    render() {
-        return (
-            <div>
-                {[1, 2, 3, 4].map((item, index) => (
-                    <Button
-                        style={{ fontSize: '1.5em' }}
-                        className="priceButton"
-                        key={index}
-                        name="price"
-                        variant="light"
-                        value={item}
-                        onClick={this.props.handleChange}>
-                        {'$'.repeat(item)}
-                    </Button>
+export function Step1(props) {
+  const [value, setValue] = useState();
 
+  const handleChange = val => {
+    props.priceChange(val);
+    setValue(val);
+  }
 
-                ))}
-            </div>
-        )
-    }
+  return (
+    <ToggleButtonGroup type="checkbox" onChange={handleChange}>
+      {[1, 2, 3, 4].map((item, index) => (
+        <ToggleButton
+          name="price"
+          variant="outline-dark"
+          key={index}
+          value={item}>
+          {'$'.repeat(item)}
+        </ToggleButton>
+      ))}
+    </ToggleButtonGroup>
+  );
 }

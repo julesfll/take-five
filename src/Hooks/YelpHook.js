@@ -2,16 +2,18 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 export const useYelpHook = (loc, selData) => {
+    const radius_m = Math.trunc(parseFloat(selData.radius) * 1609.34) + '';
     const API_KEY = 's4fNt_-ND4nCviBOL3gPAGg7NDDJaes9eUvsvQ6f4DWmY6fMWqHPiVbznBdCpFyZFSGSteUujFIxvB8OAq0nzpC8xEMGQ2x0ZbHQ97pb6C3x7MtsTqW3nw28NAVTXnYx';
     const config = {
         headers: { Authorization: `Bearer ${API_KEY}` },
         params: {
             term: 'restaurant',
-            latitude: '0',
-            longitude: '0',
-            radius: selData.radius,
+            latitude: '',
+            longitude: '',
+            radius: radius_m,
             sort_by: 'rating',
             price: selData.price,
+            open_at: selData.time,
         }
     }
 

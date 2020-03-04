@@ -6,7 +6,7 @@ export class Step2 extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: '1000',
+            value: '1',
         };
     }
     onSliderChange = (value) => {
@@ -20,10 +20,10 @@ export class Step2 extends React.Component {
                     name="radius"
                     value={this.state.value}
                     onChange={this.onSliderChange}
-                    defaultValue={1000}
-                    min={500}
-                    max={2000}
-                    step={100}
+                    defaultValue={1}
+                    min={0.5}
+                    max={2}
+                    step={0.05}
                 />
             </div>
         )

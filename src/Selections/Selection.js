@@ -10,39 +10,44 @@ export class Selection extends React.Component {
         this.state = {
             step: 1,
             price: '1',
-            radius: '1000',
-            time: '11',
+            radius: '1',
+            time: '',
         };
 
-        this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.radiusChange = this.radiusChange.bind(this);
+        this.priceChange = this.priceChange.bind(this);
+        this.timeChange = this.timeChange.bind(this);
     }
-    handleChange(event) {
-        const { name, value } = event.target;
-        this.setState({
-            [name]: value
-        });
+    priceChange(value) {
+        this.setState({ price: value.toString() })
     }
     radiusChange(value) {
         this.setState({ radius: value });
     }
+    timeChange(value) {
+        this.setState({ time: value });
+    }
     handleSubmit(event) {
         event.preventDefault();
-        this.props.onSubmit({ price: this.state.price, radius: this.state.radius });
+        this.props.onSubmit({ price: this.state.price, radius: this.state.radius, time: this.state.time });
     }
     render() {
+        const item = new Date(this.state.time * 1000);
+
         return (
             <div className="selection">
                 <h1>How much?</h1>
-                <Step1 handleChange={this.handleChange} />
-                <h3>{'$'.repeat(this.state.price)}</h3>
+                <Step1 priceChange={this.priceChange} />
 
                 <h1>How far?</h1>
-                <Step2 radiusChange={this.radiusChange}/>
-                <h3>{this.state.radius} meters (at most)</h3>
-                {/* <Step3 handleChange={this.handleChange}/>
-                <h1>{this.state.time}</h1> */}
+                <Step2 radiusChange={this.radiusChange} />
+                <h3>{parseFloat(this.state.radius).toFixed(2)} miles</h3>
+
+                <h1>When?</h1>
+                <Step3 timeChange={this.timeChange} />
+                <h3>{item.getHours() > 12 ? (item.getHours() - 12) + ' pm' : item.getHours() + ' am'} today</h3>
+                
                 <Button onClick={this.handleSubmit}>
                     Submit
                 </Button>

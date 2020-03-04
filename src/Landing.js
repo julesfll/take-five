@@ -13,9 +13,8 @@ export class Landing extends React.Component {
                         Get Started
                     </Button>
                 </Col>
-                <Col>
+                <Col className="landingImage">
                     <img
-                        className="landingImage"
                         src={splash}
                         alt="splash"
                     />
