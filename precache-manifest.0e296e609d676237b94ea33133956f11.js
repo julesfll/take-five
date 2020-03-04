@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bd7d9f2b47ef412a159d33221928759c",
+    "revision": "c5194a8fa05d1a42623f2d463d065836",
     "url": "/take-five/index.html"
   },
   {
-    "revision": "007483fd43769804e752",
-    "url": "/take-five/static/css/2.0eeca6c6.chunk.css"
+    "revision": "d62f5700de66960be340",
+    "url": "/take-five/static/css/2.8e9da055.chunk.css"
   },
   {
-    "revision": "91387e0042a4203330b4",
-    "url": "/take-five/static/css/main.55d70d9e.chunk.css"
+    "revision": "bde707e59393aed2b727",
+    "url": "/take-five/static/css/main.08435156.chunk.css"
   },
   {
-    "revision": "007483fd43769804e752",
-    "url": "/take-five/static/js/2.c65d977c.chunk.js"
+    "revision": "d62f5700de66960be340",
+    "url": "/take-five/static/js/2.2fa6a441.chunk.js"
   },
   {
     "revision": "bfa34c994aa4cec43b728b418f1ce60c",
-    "url": "/take-five/static/js/2.c65d977c.chunk.js.LICENSE.txt"
+    "url": "/take-five/static/js/2.2fa6a441.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "91387e0042a4203330b4",
-    "url": "/take-five/static/js/main.5e0195c0.chunk.js"
+    "revision": "bde707e59393aed2b727",
+    "url": "/take-five/static/js/main.8e7a139c.chunk.js"
   },
   {
     "revision": "9d3773c924d5db227354",
