@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c5194a8fa05d1a42623f2d463d065836",
+    "revision": "b531a7df07dc27926db8df405cf17564",
     "url": "/take-five/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/take-five/static/css/2.8e9da055.chunk.css"
   },
   {
-    "revision": "bde707e59393aed2b727",
+    "revision": "92fbc84ba5508a091cb2",
     "url": "/take-five/static/css/main.08435156.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/take-five/static/js/2.2fa6a441.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bde707e59393aed2b727",
-    "url": "/take-five/static/js/main.8e7a139c.chunk.js"
+    "revision": "92fbc84ba5508a091cb2",
+    "url": "/take-five/static/js/main.8107d666.chunk.js"
   },
   {
     "revision": "9d3773c924d5db227354",
