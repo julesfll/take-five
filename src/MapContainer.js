@@ -1,7 +1,7 @@
 import React from 'react';
 import { Map, Marker, InfoWindow, GoogleApiWrapper } from 'google-maps-react';
 import { InfoCard } from './InfoCard';
-import locMarker from './Images/locMarker.png';
+import locMarker from './img/locMarker.png';
 
 export class MapContainer extends React.Component {
     constructor(props) {
@@ -60,7 +60,7 @@ export class MapContainer extends React.Component {
 
         return (
             <Map
-                google={this.props.google} //need to remove restaurants and extraneous info from showing
+                google={this.props.google}
                 initialCenter={this.props.userLocation}
                 style={style}
                 containerStyle={containerStyle}
@@ -85,7 +85,6 @@ export class MapContainer extends React.Component {
                     <InfoCard name={this.state.selectedPlace.name} />
                 </InfoWindow>
                 <Marker icon={{
-                    // url: 'data:image/svg+xml;base64,' + personIcon,
                     url: locMarker,
                     anchor: new google.maps.Point(32, 32),
                     scaledSize: new google.maps.Size(32, 32),

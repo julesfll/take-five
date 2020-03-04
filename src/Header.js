@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './Images/logo.png';
-import ghLogo from './Images/gh-logo.png';
+import logo from './img/logo.png';
+import ghLogo from './img/gh-logo.png';
 import Row from 'react-bootstrap/Row';
 
 export class Header extends React.Component {

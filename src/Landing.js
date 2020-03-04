@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { Row, Col } from 'react-bootstrap';
-import splash from './Images/splash.png';
+import splash from './img/splash.png';
 
 export class Landing extends React.Component {
     render() {
