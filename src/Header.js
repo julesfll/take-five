@@ -27,6 +27,7 @@ export class Header extends React.Component {
                 <a
                     href="https://github.com/julesfll/take-five"
                     target="_blank"
+                    rel="noopener noreferrer"
                     style={{ marginLeft: 'auto', marginRight: '15px' }}>
                     <img
                         src={ghLogo}

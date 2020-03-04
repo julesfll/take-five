@@ -46,6 +46,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^2.2.0"
+    "gh-pages": "^2.2.0",
+    "stylelint": "^13.2.0",
+    "stylelint-config-standard": "^20.0.0"
   }
 }

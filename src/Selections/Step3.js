@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Button, ToggleButton, ToggleButtonGroup, OverlayTrigger, Tooltip } from 'react-bootstrap';
-import DateTimePicker from 'react-datetime-picker';
+import { ToggleButton, ToggleButtonGroup } from 'react-bootstrap';
 
 export function Step3(props) {
     const [value, setValue] = useState();
@@ -22,15 +21,6 @@ export function Step3(props) {
     return (
         <ToggleButtonGroup type="radio" name='options' onChange={handleChange}>
             {[c, morning, noon, night].map((item, index) => (
-                // <OverlayTrigger
-                //     key={index}
-                //     placement='top'
-                //     overlay={
-                //         <Tooltip id={index}>
-                //             {item.getHours() > 12 ? (item.getHours() - 12) + ' pm' : item.getHours() + ' am'} today
-                //         </Tooltip>
-                //     }
-                // >
                     <ToggleButton
                         key={index}
                         name="time"
@@ -39,7 +29,6 @@ export function Step3(props) {
                     >
                         {names[index]}
                     </ToggleButton>
-                //  </OverlayTrigger>
             ))}
         </ToggleButtonGroup>
     );

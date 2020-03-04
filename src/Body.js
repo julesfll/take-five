@@ -6,7 +6,7 @@ import { Selection } from './Selections/Selection';
 export class Body extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { page: 'Landing', selData: {} };
+        this.state = { page: 'Landing', selData: {price: '1', radius: 1, time: (Math.floor((new Date()).getTime() / 1000))} };
         this.changePage = this.changePage.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }

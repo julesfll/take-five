@@ -44,7 +44,7 @@ export class Selection extends React.Component {
                 <Step2 radiusChange={this.radiusChange} />
                 <h3>{parseFloat(this.state.radius).toFixed(2)} miles</h3>
 
-                <h1>When?</h1>
+                <h1>When to eat?</h1>
                 <Step3 timeChange={this.timeChange} />
                 <h3>{item.getHours() > 12 ? (item.getHours() - 12) + ' pm' : item.getHours() + ' am'} today</h3>
                 

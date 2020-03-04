@@ -9,7 +9,7 @@ export class RestaurantCard extends React.Component {
             const card =
                 (
                     <Card style={{ flex: 1, marginTop: '1em' }}>
-                        <Card.Img variant="top" src={rest.image_url} style={{ 'object-fit': 'cover', height: '10vw' }} />
+                        <Card.Img variant="top" src={rest.image_url} style={{ 'objectFit': 'cover', height: '20vh' }} />
                         <Card.Body>
                             <Card.Title>{rest.name}</Card.Title>
                             <Card.Subtitle style={{ 'textTransform': 'uppercase', color: 'grey' }}>{rest.categories[0].title}</Card.Subtitle>

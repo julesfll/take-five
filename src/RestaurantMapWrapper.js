@@ -5,10 +5,10 @@ import { useYelpHook } from './Hooks/YelpHook';
 import { RestaurantCardContainer } from './RestaurantCardContainer.js';
 
 export function RestaurantMapWrapper(props) {
-    const { latitude, longitude, timestamp, accuracy, error, isLoadingMap } = usePosition();
+    const { latitude, longitude, error, isLoadingMap } = usePosition();
     const pos = useMemo(() => ({ lat: latitude, lng: longitude }), [latitude, longitude])
     const [{ data, isLoading }] = useYelpHook(pos, props.selData);
-    
+
     return (
         <div>
             <div className="mapContainer">
@@ -16,8 +16,11 @@ export function RestaurantMapWrapper(props) {
                     <MapContainer userLocation={{ lat: latitude, lng: longitude }} data={data} />
                 )}
             </div>
-            <div>
-                <RestaurantCardContainer data={data} isLoading={isLoading}/>
+            {error && <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '5em' }}>
+                <h1>{error}</h1>
+            </div>}
+            <div style={{ height: '50vh' }}>
+                <RestaurantCardContainer data={data} isLoading={isLoading} />
             </div>
         </div>
     )

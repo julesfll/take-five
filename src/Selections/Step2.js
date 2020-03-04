@@ -6,7 +6,7 @@ export class Step2 extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: '1',
+            value: 1,
         };
     }
     onSliderChange = (value) => {

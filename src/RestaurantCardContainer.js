@@ -12,7 +12,7 @@ export class RestaurantCardContainer extends React.Component {
                     display: 'flex',
                     flexDirection: 'row',
                     margin: 0,
-                    width: '100%'
+                    width: '100%',
                 }} >
                     {restaurants.map((item, index) => (
                         <RestaurantCard key={index} restaurant={item} />
