@@ -1,9 +1,10 @@
 /**
- * Modified code from https://github.com/trekhleb/use-position
+ * Based on code from https://github.com/trekhleb/use-position
  */
 
 import { useState, useEffect } from 'react';
 
+// Accuracy is not always perfect, may need to change some settings or may be due to limitations of Geolocation
 const defaultSettings = {
     enableHighAccuracy: true,
     timeout: 1000,

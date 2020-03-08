@@ -1,31 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
-export class Step2 extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            value: 1,
-        };
+export function Step2(props) {
+    const [value, setValue] = useState();
+
+    const onSliderChange = value => {
+        setValue(value);
+        props.handleChange("radius", value);
     }
-    onSliderChange = (value) => {
-        this.setState({ value });
-        this.props.radiusChange(value);
-    }
-    render() {
-        return (
-            <div>
-                <Slider
-                    name="radius"
-                    value={this.state.value}
-                    onChange={this.onSliderChange}
-                    defaultValue={1}
-                    min={0.5}
-                    max={2}
-                    step={0.05}
-                />
-            </div>
-        )
-    }
+    return (
+        <div>
+            <Slider
+                name="radius"
+                value={value}
+                onChange={onSliderChange}
+                defaultValue={1}
+                min={0.5}
+                max={3}
+                step={0.05}
+            />
+        </div>
+    )
+
 }

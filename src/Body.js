@@ -6,11 +6,16 @@ import { Selection } from './Selections/Selection';
 export class Body extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { page: 'Landing', selData: {price: '1', radius: 1, time: (Math.floor((new Date()).getTime() / 1000))} };
+        this.state = {
+            page: 'Landing',
+            selData: {}
+        };
         this.changePage = this.changePage.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     changePage = (name) => this.setState({ page: name });
+
+    // When user presses submit button on form, proceed to Restaurant page and pass information along to the hooks
     handleSubmit = (input) => {
         this.setState({
             page: 'RestaurantMap',
@@ -21,7 +26,7 @@ export class Body extends React.Component {
         var out;
         switch (this.state.page) {
             case 'RestaurantMap':
-                out = <RestaurantMapWrapper selData={this.state.selData}/>;
+                out = <RestaurantMapWrapper selData={this.state.selData} />;
                 break;
             case 'Selection':
                 out = <Selection onSubmit={this.handleSubmit} />;

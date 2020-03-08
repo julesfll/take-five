@@ -12,28 +12,17 @@ export class MapContainer extends React.Component {
             selectedPlace: {}
         };
 
-        this.onMarkerHover = this.onMarkerHover.bind(this);
+        this.onMarkerClick = this.onMarkerClick.bind(this);
         this.onClose = this.onClose.bind(this);
     }
 
-    onMarkerHover = (props, marker, e) =>
+    // Show marker label on click
+    onMarkerClick = (props, marker, e) =>
         this.setState({
             selectedPlace: props,
             activeMarker: marker,
             showingInfoWindow: true
         });
-
-    recenterMap(loc) {
-        const map = this.map;
-
-        const google = this.props.google;
-        const maps = google.maps;
-
-        if (map) {
-            let center = new maps.LatLng(loc.lat, loc.lng);
-            map.panTo(center);
-        }
-    }
 
     onClose = (props) => {
         this.setState({
@@ -41,7 +30,6 @@ export class MapContainer extends React.Component {
             activeMarker: null
         })
     };
-
 
     render() {
 
@@ -55,7 +43,7 @@ export class MapContainer extends React.Component {
             display: 'flex',
         }
 
-        const restaurants = this.props.data.businesses.slice(0, 5);
+        const restaurants = this.props.data.businesses;
         const { google } = this.props;
 
         return (
@@ -64,19 +52,17 @@ export class MapContainer extends React.Component {
                 initialCenter={this.props.userLocation}
                 style={style}
                 containerStyle={containerStyle}
-                streetViewControl={false}
                 disableDefaultUI={true}
                 scaleControl={true}
                 zoomControl={true}
             >
+                { /* Markers for all restaurants on the map */}
                 {restaurants.map((item, index) => (
                     <Marker
                         key={index}
-                        onClick={this.onMarkerHover}
+                        onClick={this.onMarkerClick}
                         position={{ lat: item.coordinates.latitude, lng: item.coordinates.longitude }}
                         name={item.name} />
-
-
                 ))}
                 <InfoWindow
                     marker={this.state.activeMarker}
@@ -84,6 +70,8 @@ export class MapContainer extends React.Component {
                     onClose={this.onClose} >
                     <InfoCard name={this.state.selectedPlace.name} />
                 </InfoWindow>
+
+                {/* Marker for user position (blue dot) */}
                 <Marker icon={{
                     url: locMarker,
                     anchor: new google.maps.Point(32, 32),
