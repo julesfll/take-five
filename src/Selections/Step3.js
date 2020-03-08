@@ -9,18 +9,16 @@ export function Step3(props) {
         setValue(val);
     }
 
-    const c = new Date();
-
-    var now = new Date(c.getTime());
+    var now = new Date();
     now.setHours(now.getHours(), 0, 0, 0);
 
-    var morning = new Date(c.getTime());
+    var morning = new Date();
     morning.setHours(8, 0, 0, 0);
 
-    var afternoon = new Date(c.getTime());
+    var afternoon = new Date();
     afternoon.setHours(13, 0, 0, 0);
 
-    var night = new Date(c.getTime());
+    var night = new Date();
     night.setHours(19, 0, 0, 0);
 
     const names = ["Now", "Morning", "Afternoon", "Night"];
