@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Take Five Capital One Project
+Requirements:
+- Create a web application on Github
+- Use Yelp Fusion API
+- Plot merchants on a map
+- Get user location
 
-## Available Scripts
+## Vision
+The purpose of the project was to "help people pick the right restaurant". I realized that the best way to accomplish that goal is to introduce simplicity. In today's internet age, we're too often overwhelmed with information and options. I wanted to lift the burden of the paradox of choice by giving the user a limited set of options while still including the essentials.
 
-In the project directory, you can run:
+The most important requirements for someone choosing a restaurant include
+- Distance⁠— Users do not want to or cannot travel far to eat.
+- Time— The restaurant has to be open when they want to eat.
+- Price— Users are generally on a limited budget for food.
 
-### `npm start`
+With these elements in mind, TakeFive gives the user the right set of options and allows them to make a decision quickly and easily.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Process
+This project seemed at first like a daunting task— I had no experience in JavaScript, HTML, or CSS, or any technologies like React or APIs. However, breaking the project down into smaller parts helped me form goals and progress quickly.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Learning React (~6 hours)
+- Learned React through Codecademy course
+- Picked up JavaScript along the way— I relied on my experience with Java and Python as well as thorough research to understand the syntax
 
-### `npm test`
+### Setting up React and Github (~4 hours)
+- Followed tutorials to create Github Pages website
+- Studied default React app structure to understand basic layout
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Getting location of user (~2 hours)
+- Used HTML5 geolocation to retrieve user location
+- Eventually converted to hook
 
-### `npm run build`
+### Accessing Yelp API (~4 hours)
+- Created hook to access Yelp Fusion
+- Integrated geolocation retrieval into API call
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Mapping the user and restaurants (~4 hours)
+- Used `google-maps-react` library to create embedded Google Maps map
+- Displayed user location and markers for restaurants
+- Created labels for markers on click
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Implementing CSS (~6 hours)
+- Learned CSS from Codecademy course
+- Added CSS to all parts of website
+- Used Bootstrap for buttons and cards
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Creating selection form (~6 hours)
+- Added selection for price, radius, and time of day
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Conclusion
+I learned so much and am satisfied with the final product. If I did it again, with less time constraint, I would have taken more time to understand the code and scale up more slowly to undestand each individual part. However, the time constraint developed my ability to learn on the fly and rapidly iterate and deploy changes. That skill is in some ways more valuable than learning web development itself. I think that the final web app represents my vision well.
